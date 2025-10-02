@@ -21,6 +21,9 @@ dp = Dispatcher()
 
 async def set_bot_commands():
     commands = [
-        BotCommand(command="start", description="start bot"),
-        BotCommand(command="notificate", description="send notification to pc")
+        BotCommand(command="start", description="Запуск бота"),
+        BotCommand(command="notificate", description="Отправить уведомление на ПК"),
+        BotCommand(command="get_my_id", description="Получить свой Chat ID")
     ]
+    
+    await bot.set_my_commands(commands)
